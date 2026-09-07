@@ -1,0 +1,31 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.background {
+    background-color: #12181B;
+    height: 100vh;
+    padding-top: 1px;
+}
+
+.title {
+    text-align: center;
+    color: white;
+    font-size: 4%;
+    padding-top: 10%;
+}
+
+.display {
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+/* hide class to hide elements */
+.hide {
+    display: none;
+}
