@@ -1,58 +1,122 @@
+<!-- Tell the browser that this is a modern HTML document. -->
 <!DOCTYPE html>
+<!-- Start the page and say that its language is English. -->
 <html lang="en">
+<!-- Start the part that holds page information. -->
 <head>
+    <!-- Allow the page to show many different letters correctly. -->
     <meta charset="UTF-8">
+    <!-- Help older Internet Explorer browsers display the page well. -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Make the page fit nicely on phones and computers. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Connect this page to the CSS style file. -->
     <link rel="stylesheet" href="style.css">
+    <!-- Load the JavaScript that controls the game. -->
     <script  src="./index.js"></script>
+    <!-- Load the JavaScript that keeps the scores. -->
+    <script  src="./score.js"></script>
+    <!-- Prepare to use the Google Fonts website. -->
     <link  rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- Ask Google for the Roboto font in two thicknesses. -->
     <link  href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Set the name shown on the browser tab. -->
     <title>Finale Project</title>
+<!-- Finish the page information section. -->
 </head>
+<!-- Start the part people can see. -->
 <body>
+    <!-- Main wrapper that holds the whole game. -->
     <main class="background">
+        <!-- Area for the game's title. -->
         <section class="title">
+            <!-- The large game title. -->
             <header>Tic Tac Toe</header>
+        <!-- Finish the title area. -->
         </section>
+        <!-- Area with a short welcome message. -->
         <section class="intructions">
+            <!-- Explain what the page is and what to do next. -->
             <p>Hello! Welcome to Tic Tac Toe,
             Learn how to play by clicking on the link below. </p>
+        <!-- Finish the welcome area. -->
         </section>
+        <!-- Area for the rules link. -->
         <section class="intructions-link">
+            <!-- Open the rules page in a new browser tab. -->
             <a href="https://www.exploratorium.edu/explore/puzzles/tictactoe" 
             target="_blank">How to Play Tic Tac Toe!</a>
+        <!-- Finish the rules link area. -->
         </section>
+        <!-- Area that shows the project creators. -->
         <section class="members">
-            <p>Created by: <br> 
-                <a href="https://www.instagram.com/tanawat_huh/" target="_blank">Tanawat Laorattapong 13 M.3/1</a> 
-                <p>(ROLE - Project Lead , HTML/CSS Architect & JavaScript Developer)</p>
-                <p>30 M.3/1</p>
-                <p>1 M.3/1</p><br>
-            </p>
+            <!-- Heading for the creator list. -->
+            <h2>Created by</h2>
+            <!-- First creator's name and role. -->
+            <div class="member">
+                <!-- Link to the first creator's Instagram page. -->
+                <a class="member-name" href="https://www.instagram.com/tanawat_huh/" target="_blank">Tanawat Laorattapong</a>
+                <!-- Show the first creator's class and role. -->
+                <p class="member-role">M.3/1 · Project Lead, HTML/CSS Architect &amp; JavaScript Developer</p>
+            </div>
+            <!-- Second creator's name and role. -->
+            <div class="member">
+                <!-- Show the second creator's name and class. -->
+                <a class="member-name" href="https://www.instagram.com/manta_rrrrrrt/" target="_blank">Annawin Ponyasawas</a>
+                <!-- Show the second creator's role. -->
+                <p class="member-role">M.3/1 · Tester &amp; Documentation Lead</p>
+            </div>
+            <!-- Third creator's name and role. -->
+            <div class="member">
+                <!-- Show the third creator's name and class. -->
+                <a class="member-name" href="https://www.instagram.com/mashxl_m/" target="_blank">Kritanon Ploynagm</a>
+                <!-- Show the third creator's role. -->
+                <p class="member-role">M.3/1 · Tester &amp; Documentation Lead</p>
+            </div>
+        <!-- Finish the creators area. -->
         </section>
+        <!-- Show which player's turn it is. -->
         <section class="display">
+            <!-- The X inside the span can be changed by JavaScript. -->
             Player <span class="display-player playerX">X</span>'s turn
+        <!-- Finish the turn display. -->
         </section>
+        <!-- Hold the nine clickable squares. -->
         <section class="container">
+            <!-- Square 1. -->
             <div class="tile"></div>
+            <!-- Square 2. -->
             <div class="tile"></div>
+            <!-- Square 3. -->
             <div class="tile"></div>
+            <!-- Square 4. -->
             <div class="tile"></div>
+            <!-- Square 5. -->
             <div class="tile"></div>
+            <!-- Square 6. -->
             <div class="tile"></div>
+            <!-- Square 7. -->
             <div class="tile"></div>
+            <!-- Square 8. -->
             <div class="tile"></div>
+            <!-- Square 9. -->
             <div class="tile"></div>
 
+        <!-- Finish the game board. -->
         </section>
+        <!-- This empty box will later show the winner or tie. -->
         <section class="display announcer hide"></section>
+        <!-- Area for game control buttons. -->
         <section class="controls">
+            <!-- Button that starts a fresh round. -->
             <button id="reset">Reset</button>
+        <!-- Finish the controls area. -->
         </section>
+    <!-- Finish the main game wrapper. -->
     </main>
-    
+<!-- Finish the visible page. -->
 </body>
+<!-- Finish the HTML document. -->
 </html>
     
 

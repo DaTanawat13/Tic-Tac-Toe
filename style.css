@@ -1,102 +1,235 @@
+/* Remove the browser's default spacing and choose the page font. */
 *{
+    /* Remove space around every element. */
     padding: 0;
+    /* Remove the outside gap around every element. */
     margin: 0;
+    /* Use Roboto for all text. */
     font-family: 'Roboto', sans-serif;
 }
 
+/* Style the large background area around the game. */
 .background {
+    /* Make the background very dark. */
     background-color: #12181B;
+    /* Make the background as tall as the browser window. */
     height: 100vh;
+    /* Add a tiny space above the content. */
     padding-top: 1px;
 }
 
+/* Style the game title. */
 .title {
+    /* Put the title in the middle. */
     text-align: center;
+    /* Make the title white. */
     color: white;
+    /* Make the title very large. */
     font-size: 500%;
+    /* Move the title down from the top. */
     padding-top: 10%;
 }
 
+/* Style the welcome instructions. */
 .intructions {
+    /* Make the instructions white. */
     color: white;
+    /* Put the instructions in the middle. */
     text-align: center;
+    /* Make the letters 20 pixels tall. */
     font-size: 20px;
+    /* Add space above the instructions. */
     margin-top: 1em;
 }
 
+/* Style the rules-link area. */
 .intructions-link {
+    /* Put the link in the middle. */
     text-align: center;
+    /* Add space above the link. */
     margin-top: 1em;
 }
 
+/* Style the link inside the rules-link area. */
 .intructions-link a {
+    /* Make the link blue. */
     color: #498AFB;
+    /* Draw a line under the link. */
     text-decoration: underline;
 }
 
+/* Style the creator names and information. */
 .members {
+    /* Make this text light pink. */
     color: rgb(247, 173, 173);
+    /* Put the creator information in the middle. */
     text-align: center;
-    font-size: 20px;
-    margin-top: 1em;
+    /* Make the creator section a comfortable size. */
+    font-size: 16px;
+    /* Add space above the creator information. */
+    margin: 1em auto 0;
+    /* Keep long creator details from becoming too wide. */
+    max-width: 700px;
 }
 
-.display {
+/* Style the creator section heading. */
+.members h2 {
+    /* Make the heading easy to notice. */
     color: white;
+    /* Use a medium heading size. */
+    font-size: 20px;
+    /* Leave a little space below the heading. */
+    margin-bottom: 0.6em;
+}
+
+/* Give each creator's information a little breathing room. */
+.member {
+    /* Add space between creator entries. */
+    margin-bottom: 0.55em;
+}
+
+/* Style each creator's name. */
+.member-name {
+    /* Make names white and easy to read. */
+    color: white;
+    /* Make names slightly bold. */
+    font-weight: 700;
+    /* Remove the default link underline. */
+    text-decoration: none;
+}
+
+/* Show an underline when the linked name is hovered. */
+.member-name:hover {
+    text-decoration: underline;
+}
+
+/* Style the smaller role text. */
+.member-role {
+    /* Keep the role text softer than the names. */
+    color: rgb(247, 173, 173);
+    /* Add a small gap above the role. */
+    margin-top: 0.15em;
+}
+
+/* Style the turn message and result message. */
+.display {
+    /* Make the display text white. */
+    color: white;
+    /* Put the display text in the middle. */
     text-align: center;
+    /* Make the display letters 25 pixels tall. */
     font-size: 25px;
+    /* Add space above the display. */
     margin-top: 1em;
+    /* Add space below the display. */
     margin-bottom: 1em;
 }
 
-/* hide class to hide elements */
+/* Hide anything that has the hide class. */
 .hide {
+    /* Do not show the element. */
     display: none;
 }
 
+/* Arrange the nine game squares in a grid. */
 .container {
+    /* Put the board in the middle. */
     margin: 0 auto;
+    /* Use a grid layout. */
     display: grid;
+    /* Make three equal columns. */
     grid-template-columns: 33% 33% 33%;
+    /* Make three equal rows. */
     grid-template-rows: 33% 33% 33%;
+    /* Keep the board from becoming wider than 300 pixels. */
     max-width: 300px;
 }
 
+/* Style each clickable game square. */
 .tile {
+    /* Draw a thin white border around each square. */
     border: 1px solid white;
+    /* Make sure each square is at least 100 pixels wide. */
     min-width: 100px;
+    /* Make sure each square is at least 100 pixels tall. */
     min-height: 100px;
+    /* Use flexible layout inside the square. */
     display: flex;
+    /* Put the letter in the horizontal middle. */
     justify-content: center;
+    /* Put the letter in the vertical middle. */
     align-items: center;
+    /* Make X and O large. */
     font-size: 50px;
+    /* Show a hand cursor to tell users the square can be clicked. */
     cursor: pointer;
 }
 
+/* Choose the color used for X. */
 .playerX {
+    /* Make X green. */
     color: #09C372;
 }
 
+/* Choose the color used for O. */
 .playerO {
+    /* Make O blue. */
     color: #498AFB;
 }
 
+/* Arrange the control buttons. */
 .controls  {
+    /* Use flexible layout for the buttons. */
     display: flex;
+    /* Put buttons in a row. */
     flex-direction: row;
+    /* Put the buttons in the horizontal middle. */
     justify-content: center;
+    /* Put the buttons in the vertical middle. */
     align-items: center;
+    /* Add space above the buttons. */
     margin-top: 1em;
 }
 
+/* Style the Reset button. */
 #reset {
+    /* Give the button a pink-red background. */
     background-color: #FF3860;
+    /* Make the button text white. */
     color: white;
+    /* Add space inside the button. */
     padding: 8px;
+    /* Make the button corners rounded. */
     border-radius: 8px;
+    /* Remove the browser's default button border. */
     border: none;
+    /* Make the button letters 20 pixels tall. */
     font-size: 20px;
+    /* Add a little space to the button's left side. */
     margin-left: 1em;
+    /* Show a hand cursor when the button can be clicked. */
     cursor: pointer;
 
+}
+
+/* Style the score display created by score.js. */
+.score-board {
+    /* Make the score text white. */
+    color: white;
+    /* Put the score items in a flexible row. */
+    display: flex;
+    /* Put the score row in the horizontal middle. */
+    justify-content: center;
+    /* Leave space between the score items. */
+    gap: 1.5em;
+    /* Make the score letters 18 pixels tall. */
+    font-size: 18px;
+    /* Center the scoreboard and add space below it. */
+    margin: 0 auto 1em;
+}
+
+/* Style the changing score numbers. */
+.score-board strong {
+    /* Make the numbers light pink. */
+    color: #f7adad;
 }
